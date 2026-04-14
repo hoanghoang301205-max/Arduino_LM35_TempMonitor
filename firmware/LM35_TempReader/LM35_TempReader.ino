@@ -6,7 +6,7 @@ void loop() {
   nhietDo[0] = (adcValues[0] * 500.0) / 1023.0;
   adcValues[1] = analogRead(A1);
   nhietDo[1] = (adcValues[1] * 500.0) / 1023.0;
-  sprintf(chuoi, "%d,%d\n", (int)nhietDo[0], (int)nhietDo[1]);
+  sprintf(chuoi, "{\"temp1\":%d,\"temp2\":%d}\n", (int)nhietDo[0], (int)nhietDo[1]);
   Serial.print(chuoi);
   delay(100);
 }
